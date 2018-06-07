@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment</title>
+<style>
+p{
+	display: none;
+	width: 250px;
+	word-break: break-all;
+	padding-left: 10px;
+	 -ms-transform: translate(500px,250px); /* IE 9 */
+    -webkit-transform: translate(500px,250px); /* Safari */
+    transform: translate(500px,150px); /* Standard syntax */
+cursor : pointer;
+
+}
+#dropdown {
+	width :250px;
+	height:35px;
+	border: 1px solid white; 	
+	padding-top: 14px;
+	padding-left: 10px;
+	 -ms-transform: translate(500px,250px); /* IE 9 */
+    -webkit-transform: translate(500px,250px); /* Safari */
+    transform: translate(500px,250px); /* Standard syntax */
+    transition-property: height;
+  transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  cursor: pointer;
+    
+
+
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: yellow;
+
+
+  } 
+  .flex-container > button  {
+  width: 5px;
+  height : 10px;
+  margin-top: 5px;
+  margin-left:  155px; 
+  line-height: 55px;
+  
+  
+}
+
+
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+  
+
+	document.getElementById("dropdown").addEventListener("click", expand);
+}
+
+function expand(){
+
+
+	 if (document.getElementById("content").style.display === "none") {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("dropdown").style.height='125px';
+    } else {
+        document.getElementById("content").style.display = "none";
+        document.getElementById("dropdown").style.height='35px';
+    }
+	
+	
+}
+
+</script>
+	
+</head>
+<body>
+	
+	<div id="dropdown" class= "flex-container" >Dropdown	
+	
+	<button></button>
+	
+</div>
+<p id="content" >asdf ghjkk vbnn yeetgdb bmmsloiuree asdf ghjkk vbnn yeetgdb bmmsloiuree vbnn yeetgdb </p>	
+
+
+</body>
+</html>

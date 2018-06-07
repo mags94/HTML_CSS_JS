@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> button disable
+</title>
+<style>
+
+.content {
+	transform: translate(500px,250px);
+}
+.main {
+	width: 150px;
+	height: 50px;
+	margin-left: 20px;
+	background-color: red;
+	border-radius: 25px;
+
+}
+.main:hover {
+	cursor: pointer;
+}
+.main-disabled {
+	//background-color: grey;
+}
+
+</style>
+<script>
+window.onload=function(){
+document.getElementById("disable").addEventListener("click", disable);
+document.getElementById("enable").addEventListener("click", enable);
+
+}
+function disable(){
+
+	document.getElementById("mainButton").style.backgroundColor= "grey";
+	document.getElementById("mainButton").style.cursor ="auto";
+}
+
+function enable(){
+
+	document.getElementById("mainButton").style.backgroundColor= "red";
+	document.getElementById("mainButton").style.cursor ="pointer";
+
+}
+
+	</script>
+</head>
+
+<body>
+<div class="content">
+<button id= "mainButton" class="btn main">Click Me</button>
+<br/> <br/>
+<div>
+<button id="disable" class="btn disable">Disable
+Button</button>
+<button id="enable" class="btn enable">Enable
+Button</button>
+</div>
+</div>
+</body>
+</html>
